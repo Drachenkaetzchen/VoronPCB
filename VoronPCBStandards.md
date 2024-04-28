@@ -72,6 +72,10 @@ A clarification diagram should be placed near the fan headers:
 
 The arrangement can be extended to a fourth position, forming a cross-shaped selection.
 
+## Jumpers
+
+Included jumpers for board configuration must always have a handle. The only exception is when there's not enough space, for example, below stepper drivers.
+
 ## MOSFET output indications
 
 All MOSFET driven outputs must have an LED indicator. The indicator must be placed on the driving side of the MOSFET, so that the user can verify that their
@@ -83,8 +87,21 @@ The output side may optionally have a LED indicator, which allows the user to se
 
 All MOSFET driven outputs must be protected against short circuits. We don't want an accidental temporary short of the heater burn people's houses down.
 
+## MOSFET output current documentation
+
+Every header which is connected to a MOSFET must have the maximum current documented in the pin diagram. If possible, also on the board's silkscreen.
+
 # Optional
 
 ## Indicate DFU mode is active
 
 When STM32 devices are in bootloader mode, some pins get pulled high or low on startup. Use one of them to light a LED indicating that DFU is active. See STM32's AN2606 for which pins that are. 
+
+## Provide 12V and 5V fan options by default
+
+All bigger boards should provide step-down converters to provide 12V and 5V for fan outputs. The maximum current for each of these rails should be documented on the silkscreen.
+
+## Pin Documentation on front silkscreen
+
+The user-facing silkscreen ahould list the pin's purpose and connected GPIO pin. For example, a fan port might have it's two pins labelled as "V+" and "PA12". If one pin is configurable,
+for example using the fan jumper block shown above, a line can indicate the relation between V+ and the voltage selection header.
