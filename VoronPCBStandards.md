@@ -47,7 +47,7 @@ In case something goes wrong, it sucks to waste the time of the user and helpers
  Diode to prevent backflow of the board's 5V rail to the host computer. The diode must be sized that an accidental
 short between the board's higher voltage rails to the board's 5V rail doesn't impact the host computer.
 
-# Fan voltage selection
+## Fan voltage selection
 
 The usual stack of a 2x3 pin header where the user needs to put on a jumper can easily lead to errors and short rails together.
 
@@ -72,14 +72,14 @@ A clarification diagram should be placed near the fan headers:
 
 The arrangement can be extended to a fourth position, forming a cross-shaped selection.
 
-# MOSFET output indications
+## MOSFET output indications
 
 All MOSFET driven outputs must have an LED indicator. The indicator must be placed on the driving side of the MOSFET, so that the user can verify that their
 configuration is correct and that the mosfet is actually being driven.
 
 The output side may optionally have a LED indicator, which allows the user to see when the MOSFET is requested to be on, but there's some other issue (like output protection active / fuse blown / no supply voltage present).
 
-# MOSFET output protection
+## MOSFET output protection
 
 All MOSFET driven outputs must be protected against short circuits. We don't want an accidental temporary short of the heater burn people's houses down.
 
