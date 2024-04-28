@@ -91,6 +91,12 @@ All MOSFET driven outputs must be protected against short circuits. We don't wan
 
 Every header which is connected to a MOSFET must have the maximum current documented in the pin diagram. If possible, also on the board's silkscreen.
 
+## Status LED
+
+Provide a status LED connected to the MCU. If a DFU LED is implemented, it can be re-used. It must be clearly documented that the LED is purely user-controllable or serves a dual function to indicate DFU mode and
+is user-controllable. This is important for software like Katapult to indicate it's own bootloader mode.
+
+
 # Optional
 
 ## Indicate DFU mode is active
