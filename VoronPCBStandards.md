@@ -96,6 +96,13 @@ Every header which is connected to a MOSFET must have the maximum current docume
 Provide a status LED connected to the MCU. If a DFU LED is implemented, it can be re-used. It must be clearly documented that the LED is purely user-controllable or serves a dual function to indicate DFU mode and
 is user-controllable. This is important for software like Katapult to indicate it's own bootloader mode.
 
+## Document pins and their associated circuitry
+
+Document which pins have direct connections to the MCU and what the surrounding circuitry is:
+- Is the pin directly connected to MCU?
+- Does the pin have hardware pullups?
+- Is it connected to a MOSFET?
+- Intended purpose of that pin
 
 # Optional
 
